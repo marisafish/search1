@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+[method="get"]{
+  display: flex;
+  justify-content: center; /*中央へ固定*/	
+  height:50px;/*高さ*/	
+}
+
+/*入力フォーム*/
+[name^="q"]{
+  width:250px;/*横幅*/
+  height:45px;
+  padding:0 15px;/*プレースホルダーの位置調整*/
+  border-radius:25px 25px 25px 25px;/*左側の角を少し丸める*/		
+  background:#eee;/*検背景カラー*/
+  border:none;/*枠線を消す*/ 
+  border:2px solid #7fbfff;
+  outline:0;/*クリック時の青い枠線消す*/	
+}
+/*検索ボタン*/
+[name^="btnG"]{
+  width:70px;/*横幅*/ 
+  height:45px;
+  border-radius:25px 25px 25px 25px;/*右側の角を少し丸める*/ 
+  background:#7fbfff;/*背景カラー*/ 
+  border:none;/*枠線を消す*/ 
+  color:#fff;/*テキストカラー*/ 
+  font-size:16px;/*フォントサイズ指定*/ 
+  cursor: pointer;/*マウスを乗せると指差しポインターになる*/
+}
+/*検索ボタンマウスオーバー時*/
+[name^="btnG"]:hover {
+  background: #92dbff;/*背景カラー変更*/
+}
+</style>
+</head>
+<body>
+<!-- Google  -->
+<form method="get" action="http://www.google.co.jp/search">
+<table bgcolor="#FFFFFF"><tr><td>
+<input type=text name=q size=31 maxlength=255 value="">
+<input type=hidden name=ie value=UTF-8>
+<input type=hidden name=oe value=UTF-8>
+<input type=hidden name=hl value="ja">
+<input type=submit name="btnG" value="検索">
+</td></tr></table>
+</form>
+<!-- Google -->
+</body>
+</html>
