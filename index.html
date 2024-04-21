@@ -6,41 +6,43 @@
 <style>
 [method="get"]{
   display: flex;
-  justify-content: center; /*中央へ固定*/	
-  height:50px;/*高さ*/	
+  justify-content: center; 	
+  border: solid 2px #666;
+  max-width: 300px;
+  height:50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;	
 }
 
 /*入力フォーム*/
 [name^="k"], [name^="q"], [name^="sitem"]{
-  width:250px;/*横幅*/
-  height:45px;
-  padding:0 15px;/*プレースホルダーの位置調整*/
-  border-radius:25px 0 0 25px;/*左側の角を少し丸める*/		
-  background:#eee;/*検背景カラー*/
-  border:none;/*枠線を消す*/ 
-  border:2px solid #7fbfff;
-  outline:0;/*クリック時の青い枠線消す*/	
+  width:240px ;
+  padding: 0 15px;
+  border-radius: initial;
+  background:transparent;
+  border:none;
+  outline:0;
 }
 /*検索ボタン*/
 [name^="btnG"], [value^="検索"]{
-  width:70px;/*横幅*/ 
-  height:45px;
-  border-radius:0 25px 25px 0;/*右側の角を少し丸める*/ 
-  background:#7fbfff;/*背景カラー*/ 
-  border:none;/*枠線を消す*/ 
-  color:#fff;/*テキストカラー*/ 
-  font-size:16px;/*フォントサイズ指定*/ 
-  cursor: pointer;/*マウスを乗せると指差しポインターになる*/
+  width: 50px;
+  background:transparent;
+  border-radius: initial;
+  border:none;
+  color:#666;
+  font-size:18px;
+  cursor: pointer;
 }
 /*検索ボタンマウスオーバー時*/
 [name^="btnG"]:hover {
-  background: #92dbff;/*背景カラー変更*/
+background: #7fbfff;
+color:#fff;
 }
 </style>
 </head>
 <body>
 <form method=get action="http://www.google.co.jp/search"><tr><td>
-<img src="https://raw.githubusercontent.com/marisafish/search1/main/icons8-google%E3%81%AE%E3%83%AD%E3%82%B4.svg"></img>
 <input type=text name=q size=24 maxlength=255 value="" placeholder="Googleで検索...">
 <input type=hidden name=ie value=UTF-8>
 <input type=hidden name=oe value=UTF-8>
@@ -52,7 +54,6 @@
 <!-- Google  -->
 <form method="get" action="https://www.amazon.co.jp/s">
 <tr><td>
-<img src="https://raw.githubusercontent.com/marisafish/search1/main/icons8-%E3%82%A2%E3%83%9E%E3%82%BE%E3%83%B3.svg"></img>
 <input type=text name=k size=24 maxlength=255 value="" placeholder="Amazonを検索...">
 <input type=hidden name=ie value=UTF-8>
 <input type=hidden name=oe value=UTF-8>
@@ -66,7 +67,6 @@
 <input type="hidden" name="sid" value="●（店舗ID）" />
 <input type="hidden" name="su" value="▲（店舗URL）" />
 <input type="hidden" name="sn" value="■（店舗名）" />
-<img src="https://corp.rakuten.co.jp/security/assets/img/anti-fraud/circle_logo.svg" width="48" height="48"></img>
 <input type="text" name="sitem" placeholder="楽天市場を検索..." />
 <input type="hidden" name="f" value="A" />
 <button type="submit" name="btnG" value="検索"><span class="material-symbols-outlined">search</span></button>
